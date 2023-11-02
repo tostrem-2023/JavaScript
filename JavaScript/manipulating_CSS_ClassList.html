@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .big {
+            font-size: 24px;
+        }
+        .red {
+            color: red;
+        }
+    </style>
+</head>
+<body>
+    <p id="id" class="red">
+        Lorem ipsum dolor sit, amet consectetur adipisicing elit. Et dicta id distinctio enim quidem deserunt architecto a animi facere, doloremque doloribus aut quibusdam est nulla laborum aliquid? Mollitia, odit quasi!
+        <button onclick="changeColor();">Change color</button>
+    </p>
+    <script>
+        function changeColor() {
+            // document.getElementsByTagName('p')[0].style.backgroundColor = 'yellow';
+            document.querySelector("#id").setAttribute("style","background-color:purple");  // either line 23 or 24 works
+            document.getElementsByTagName('p')[0].classList.add('big');
+            document.getElementsByTagName('p')[0].classList.remove('red');
+        };
+    </script>
+</body>
+</html>

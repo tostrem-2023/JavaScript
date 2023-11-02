@@ -1,0 +1,9 @@
+const jsonStr ='{
+        "Name": "JSON",
+        "Type": "Exchange format",
+        "Similar Types": ["XML", "YML", "CSV"],
+        "Rating": 10
+    }'
+
+const obj = JSON.parse(jsonStr);
+console.log(obj.Name);

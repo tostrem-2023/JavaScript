@@ -1,0 +1,72 @@
+Write a program that displays the message "Welcome to CodeSimple!" on the screen.
+PRINT "Welcome to CodeSimple!"
+
+Write a program that calculates the difference between two numbers (e.g. 15 and 7) and displays the result on the screen.
+SET num1 = 15
+SET num2 = 7
+SET difference = SUBTRACT num1 - num2
+PRINT difference
+
+Write a program that takes two numbers as input from the user and displays the larger of the two numbers.
+INPUT "Enter the first number" num1 => 5
+INPUT "Enter the second number" num2 => 10
+IF num1 > num2 THEN
+    PRINT num1
+ELSE
+    PRINT num2
+
+Write a program that uses a loop to display the even numbers from 2 to 20 on the screen.
+2 | 4 | 6 | 8 | 10 | 12 | 14 | 16 | 18 | 20
+SET num=2
+LOOP 10 TIMES
+    PRINT num
+    SET num = ADD num + 2
+
+Write a program that calculates the square of a number provided by the user and displays the result.
+INPUT "Enter a number" num
+SET square = MULTIPLY num * num
+PRINT square
+
+Write a program that generates the Fibonacci (sequence of numbers where each number is the sum of the two preceding numbers) sequence up to the 10th term and displays it.
+0, 1, 1, 2, 3, 5, 8, 13, 21, 34
+    0 |   1 | 1 | 2 | 3 | 5 | 8 | 13 | 21 | 34
+term1   term2  -->   -->   -->   ->
+SET term1 = 0
+SET term2 = 1
+PRINT term1
+LOOP 9 TIMES
+    PRINT term2
+    SET nextTerm = ADD term1 + term2
+    SET term1 = term2
+    SET term2 = nextTerm
+
+Write a program that calculates the factorial of a given number and displays the result. 
+*(Factorial = the product of a whole number with every whole number below it.)
+    Ex: 5=5(4)(3)(2)(1)=120
+INPUT "Enter a number" num => 5
+SET factorial = 1 (because it's always in the factorial)
+LOOP num TIMES
+    SET factorial = MULTIPLY factorial * num
+    SET num = SUBTRACT num - 1
+
+Write a program that calculates the sum of all numbers from 1 to 100 and display the result.
+SET sum = 0
+SET count = 1
+LOOP 100 TIMES
+    SET sum = ADD sum + count
+    SET count = ADD count + 1
+
+Write a program that calculates the average of three numbers provided by the user and display the result.
+INPUT "Enter the first number" num1 => 1
+INPUT "Enter the second number" num2 => 2
+INPUT "Enter the third number" num3 => 3
+SET sum = ADD num1 + num2 + num3
+SET average = DIVIDE sum / 3
+PRINT "The average is" + average
+
+Write a program that prompts the user to enter a positive integer and then displays all the even numbers up to that integer.
+INPUT "Enter a positive integer" num
+SET count = 2
+LOOP num / 2 TIMES
+    PRINT count
+    SET count = count + 2  

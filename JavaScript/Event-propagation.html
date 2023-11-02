@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #div-gp, #div-p, #div-c {
+            border: 1px solid crimson;
+            padding: 40px;
+        }
+    </style>
+</head>
+<body>
+    <div id="div-gp">
+        <div id="div-p">
+            <div id="div-c">
+                I am child div
+            </div>
+        </div>
+    </div>
+
+    <script>  // the below is called bubbling --> order is always from the inner most to outer most, regardless of the order you write the script
+        document.querySelector('#div-c').addEventListener('click', function (){
+            console.log('div-c clicked');
+        });
+
+        document.querySelector('#div-p').addEventListener('click', function (){
+            console.log('div-p clicked');   // executes for both parent and child divs because the child is within the parent
+        });
+
+        document.querySelector('#div-gp').addEventListener('click', function (){
+            console.log('div-gp clicked');  // executes for grandparent, parent and child divs because the child is within the parent that is within the grandparent
+        });
+
+    </script>
+</body>
+</html>

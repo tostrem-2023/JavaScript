@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <p id = "Para-1">
+        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Deleniti commodi laborum, aut culpa hic magni voluptatum doloribus blanditiis ratione dolores id totam suscipit provident quisquam illum. Culpa dicta consectetur magni.
+    </p>
+    <button onclick = "handleClick ();">Click here</button>  
+    <script>
+        window.onload = function () {   // before the window is loaded, the function will execute
+            alert('The page has loaded');
+        };
+
+        function handleClick () {
+            alert ('The button was clicked!')
+        };
+
+        document.querySelector('button').onclick = handleClick; // not calling the function immediately (ex: handleClick()), instead - when the click happens, the function will run. This is the preferred process --> NOT line 12. Line 12 is mixing JS and HTML; best practice is to keep JS within the script at the end of the HTML code.
+
+        document.getElementById ('Para-1').onmouseover = function () {  // --> See line 28 for preferred event handler because only one onevent handler can be used this way.
+        console.log ("Mouse is over me.");
+        };
+
+        document.getElementById ('Para-1').addEventListener ("mouseover", function () {  // this is preferred method for setting up event handlers
+            console.log ("Mouse is over me.");
+        });
+    </script>
+</body>
+</html>

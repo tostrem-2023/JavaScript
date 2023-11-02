@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <p>
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Facere possimus et enim unde numquam, explicabo quam ipsam maiores? Sunt fugit facilis nulla officiis et nam fuga iure enim laborum veniam. Lorem ipsum dolor, sit amet consectetur adipisicing elit. Error laborum culpa cum omnis fugit nulla quae, est ea quod inventore temporibus. Culpa quos necessitatibus consequatur ipsam! Rem consequuntur aut fugit!
+    </p>
+    <p>
+        Lorem ipsum dolor sit, amet consectetur adipisicing elit. Corporis quod soluta quidem adipisci porro cum neque qui illum voluptas beatae veritatis excepturi sit eaque iste vel rem similique, mollitia natus?Lorem ipsum dolor sit amet consectetur adipisicing elit. Illum, distinctio animi nisi corporis hic ducimus sed ipsam ad eveniet eius eum odio nihil quasi eligendi. Cum enim architecto corporis omnis?
+    </p>
+    <script>
+        setTimeout(function () {
+            document.querySelector('p:first-of-type').innerHTML = '<span>Span 1</span> <span>Span 2</span>';
+
+            document.querySelector('p:last-of-type').innerText = '<span>Span 1</span> <span>Span 2</span>';
+        }, 10000); // setTimeout is in milliseconds -> 10000 milliseconds = 10 seconds
+    </script>
+</body>
+</html>

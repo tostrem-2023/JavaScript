@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <p>
+        Lorem ipsum dolor sit, amet consectetur adipisicing elit. Et dicta id distinctio enim quidem deserunt architecto a animi facere, doloremque doloribus aut quibusdam est nulla laborum aliquid? Mollitia, odit quasi!
+        <button onclick="changeColor();">Change color</button>
+    </p>
+    <script>
+        function changeColor() {
+            document.getElementsByTagName('p')[0].style.color = 'red';
+            document.getElementsByTagName('p')[0].style.backgroundColor = 'yellow';
+            document.getElementsByTagName('p')[0].style.fontSize = '24px';
+        };
+    </script>
+</body>
+</html>

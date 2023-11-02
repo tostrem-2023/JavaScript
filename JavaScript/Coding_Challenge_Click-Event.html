@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <p>
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Repellendus beatae, nulla, fuga incidunt a maiores, quasi consectetur vero itaque harum necessitatibus optio ullam. Unde autem culpa suscipit iste eius nesciunt!
+    </p>
+    <button id = 'btn'>Button</button>
+    <script>
+        window.onload = function () {   // before the window is loaded, the function will execute
+            alert('This page contains a button.');
+        };
+        function click () {
+            alert ('Button Clicked');
+        }
+        document.getElementById('btn').onclick = click;
+    </script>
+</body>
+</html>

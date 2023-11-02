@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=>, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    Enter your favorite color: <input type = "text" id = "favorite-color" />
+    Enter your favorite city: <input type = "text" id = "favorite-city" />
+</body>
+
+<script>
+    let favoriteColor, favoriteCity;
+
+    document.querySelector('#favorite-color').addEventListener('input', function() {
+        // local storage can store only strings
+        favoriteColor = this.value;
+        document.body.style.backgroundColor = favoriteColor;
+        sessionStorage.setItem('favorites', JSON.stringify({color: favoriteColor, city: favoriteCity}));
+        
+    });
+    document.querySelector('#favorite-city').addEventListener('input', function() {
+        favoriteCity = this.value;
+        sessionStorage.setItem('favorites', JSON.stringify({color: favoriteColor, city: favoriteCity}));
+    });
+</script>
+
+</html>

@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>W3 DOM Manipulation - Live Class</title>
+</head>
+<body>      
+    <h1 id="hello" class="salutations">Hello Spencer!</h1>
+    <h1 id="goodbye" class="salutations">Goodbye Nolan!</h1>
+    <button id="click-me">CLICK HERE</button>
+</body>
+    <script>
+        var hello = document.getElementById('hello');
+        hello.addEventListener('click', function() {{
+            console.log('button was clicked');
+        }});
+        // hello.addEventListener('mouseover', function() {{
+        //     console.log('button was hovered over');
+        // }});
+    </script>
+</html>

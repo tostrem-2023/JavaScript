@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <img src="./Lion King Image.jpeg" />
+    <button onclick="changeImage();">Change Image</button>
+
+    <script>
+        function changeImage() {
+            // document.querySelector('img').src = './Real Lion King.jpeg';  // querySelector allows access to CSS selectors on the HTML page
+
+            // hasAttribute() --> returns boolean value 
+            document.querySelector('img').hasAttribute('src') // use to check if selector has this attribute
+            console.log (document.querySelector('img').hasAttribute('src')); // returns "true" value because the img has the src attribute
+            document.querySelector('img').hasAttribute('alt') 
+            console.log (document.querySelector('img').hasAttribute('alt')); // returns "false" value because the img does not have the alt attribute, it has src
+
+            // getAttribute() --> Gets the value of the attribute
+            document.querySelector('img').getAttribute('src') 
+            console.log (document.querySelector('img').getAttribute('src'));  // returns ./Real Lion King.jpeg (because image was replaced on lines 10 and 14)
+
+            // setAttribute() --> Must pass a second argument
+            document.querySelector('img').setAttribute('src', './Real Lion King.jpeg');
+        };
+    </script>
+</body>
+</html>

@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <p class = "paragraph">
+        <h2 class = "header"> Header 2 </h2>
+        Lorem ipsum dolor, sit amet consectetur adipisicing elit. Repudiandae sunt ratione mollitia fugit maxime! Sit molestias ex commodi illo assumenda, nam consequatur nihil expedita eveniet, ea officiis aspernatur cum ullam.
+    </p>
+    <p class = "paragraph">
+        <h3 class = "header"> Header 3 </h3>
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Neque quisquam facilis sit accusamus officiis, corporis eos maiores, cum obcaecati nemo earum dolorum suscipit. Suscipit, accusamus autem labore ipsam nisi obcaecati. Lorem, ipsum dolor sit amet consectetur adipisicing elit. Voluptatibus, fuga natus rerum voluptas alias dicta non facere earum ex rem eius modi iusto! Rem eos nemo, iste nobis voluptatem maxime? Lorem ipsum dolor sit, amet consectetur adipisicing elit. Placeat vitae tempora excepturi sequi suscipit minima accusamus doloremque, laborum quos aut, libero repellat maxime temporibus reprehenderit dicta quae fugiat eos nisi.
+    </p>
+    <div id = "div">
+        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptatum maiores rerum magni magnam, delectus fugit odio officia officiis ullam sunt iste optio repellat error quisquam esse commodi consectetur ipsum ea.
+    </div>
+    <script>
+        var h = document.getElementsByClassName("header");
+        var p = document.getElementsByClassName("paragraph");
+        var div = document.getElementById("div");
+        for (var i=0; i<p.length; i++) {
+            console.log(p[i]);
+            p[i].innerText="PARAGRAPH"; // added "PARAGRAPH" to start of paragraph sections (even before the h2 and h3 tags)
+        };
+        for (var i=0; i<h.length; i++) {
+            h[i].innerText="HEADING"; // changed text from "Header 2" and "Header 3" to "HEADINGS"
+        };
+        div.innerHTML='<h1>This heading is inserted using JS code</h2>'; // replaced the text in the div
+    </script>
+</body>
+</html>

@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <p id="Para 1">
+        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Totam voluptatem rerum beatae labore illo odit optio explicabo nam vero, sed culpa minima. Aut sapiente dignissimos ullam voluptates, officiis tempora accusamus?
+    </p>
+    <div class = "xyz">
+        Lorem ipsum dolor, sit amet consectetur adipisicing elit. Beatae amet assumenda inventore necessitatibus ut, nihil consequatur ab eaque, quis quas maiores, provident recusandae cupiditate adipisci officia quasi non optio voluptatum?
+    </div>
+    <section class="xyz abc">
+        Lorem ipsum, dolor sit amet consectetur adipisicing elit. Ab sapiente dolor aliquam doloribus ipsam mollitia, ratione unde eius similique numquam porro praesentium culpa id dolorem! Eius facere laboriosam repudiandae quo?
+    </section>
+    <script>
+        var para1 = document.getElementById("Para 1");
+        console.log(para1);
+        var xyzElements = document.getElementsByClassName("xyz");
+        console.log(xyzElements);
+        console.log(xyzElements[0]);
+        console.log(xyzElements[1]);
+        console.log(xyzElements.length);
+
+        // document.getElementsByTagName to select multiple tags such as paragraph or div
+
+        var example = document.querySelector(".xyz"); // not supported in older browsers; used to select CSS element -> returns only first element found
+        console.log(example);
+        var example2 = document.querySelectorAll(".xyz"); // returns all
+        console.log(example2); // can also use .length
+
+    </script>
+</body>
+</html>
